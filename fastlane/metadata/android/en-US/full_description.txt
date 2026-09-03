@@ -1,0 +1,26 @@
+PyReference is a personal Python reference that lives on your phone and works completely offline.
+
+<b>400+ reference cards:</b>
+<ul>
+<li>keywords and operators</li>
+<li>built-in functions</li>
+<li>data types and their methods</li>
+<li>exceptions</li>
+<li>standard library modules</li>
+<li>terminal commands and git</li>
+<li>popular libraries</li>
+</ul>
+
+<b>Every card includes</b> syntax, parameters, return value, possible errors, examples and a "what to use instead" block.
+
+<b>Useful articles:</b> step-by-step guides — from virtual environments to a Telegram bot and databases.
+
+<b>More features:</b>
+<ul>
+<li>full-text search across all fields</li>
+<li>cards sorted by popularity</li>
+<li>favorites synced between phone and PC</li>
+<li>100% offline</li>
+</ul>
+
+Free and open source.

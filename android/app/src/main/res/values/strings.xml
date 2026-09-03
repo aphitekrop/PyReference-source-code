@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">PyReference</string>
+    <string name="title_activity_main">PyReference</string>
+    <string name="package_name">com.pyreference.app</string>
+    <string name="custom_url_scheme">com.pyreference.app</string>
+</resources>
