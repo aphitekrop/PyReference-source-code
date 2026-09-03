@@ -1,0 +1,1895 @@
+{
+  "meta": {
+    "version": 2,
+    "sectionTitle": {
+      "ru": "Полезные статьи",
+      "en": "Useful articles"
+    }
+  },
+  "articles": [
+    {
+      "id": "venv",
+      "title": {
+        "ru": "Как создать виртуальное окружение",
+        "en": "How to create a virtual environment"
+      },
+      "summary": {
+        "ru": "Создание изолированного окружения Python для проекта.",
+        "en": "Create an isolated Python environment for a project."
+      },
+      "category": "environment",
+      "tags": [
+        "venv",
+        "pip"
+      ],
+      "rank": 10,
+      "updated": "2026-02-14",
+      "intro": [
+        {
+          "ru": "Виртуальное окружение устанавливает библиотеки отдельно для каждого проекта.",
+          "en": "A virtual environment installs libraries separately for each project."
+        }
+      ],
+      "links": [
+        {
+          "title": {
+            "ru": "Документация venv",
+            "en": "venv documentation"
+          },
+          "url": "https://docs.python.org/3/library/venv.html"
+        }
+      ],
+      "steps": [
+        {
+          "title": {
+            "ru": "Открой терминал в папке проекта",
+            "en": "Open a terminal in the project folder"
+          },
+          "text": {
+            "ru": "Перейди в папку проекта.",
+            "en": "Go to the project folder."
+          },
+          "code": "cd my_project",
+          "screenshot": {
+            "src": null,
+            "alt": {
+              "ru": "Скриншот",
+              "en": "Screenshot"
+            },
+            "note": {
+              "ru": "Терминал открыт в папке проекта.",
+              "en": "Terminal opened in the project folder."
+            }
+          }
+        },
+        {
+          "title": {
+            "ru": "Создай окружение",
+            "en": "Create the environment"
+          },
+          "text": {
+            "ru": "Команда создаст папку .venv.",
+            "en": "The command creates the .venv folder."
+          },
+          "code": "python -m venv .venv",
+          "screenshot": {
+            "src": null,
+            "alt": {
+              "ru": "Скриншот",
+              "en": "Screenshot"
+            },
+            "note": {
+              "ru": "Создание виртуального окружения.",
+              "en": "Creating the virtual environment."
+            }
+          }
+        },
+        {
+          "title": {
+            "ru": "Активируй окружение в Windows",
+            "en": "Activate on Windows"
+          },
+          "text": {
+            "ru": "Используй activate из папки Scripts.",
+            "en": "Use activate from the Scripts folder."
+          },
+          "code": ".venv\\Scripts\\activate"
+        },
+        {
+          "title": {
+            "ru": "Активируй окружение в Linux/macOS",
+            "en": "Activate on Linux/macOS"
+          },
+          "text": {
+            "ru": "Используй source.",
+            "en": "Use source."
+          },
+          "code": "source .venv/bin/activate",
+          "screenshot": {
+            "src": null,
+            "alt": {
+              "ru": "Скриншот",
+              "en": "Screenshot"
+            },
+            "note": {
+              "ru": "Активированное окружение.",
+              "en": "Activated environment."
+            }
+          }
+        },
+        {
+          "title": {
+            "ru": "Выйди из окружения",
+            "en": "Deactivate"
+          },
+          "text": {
+            "ru": "Когда работа закончена.",
+            "en": "When you are done."
+          },
+          "code": "deactivate"
+        }
+      ],
+      "images": [],
+      "entries": [
+        "python-m-venv",
+        "python",
+        "pip"
+      ]
+    },
+    {
+      "id": "install-library",
+      "title": {
+        "ru": "Как установить библиотеку",
+        "en": "How to install a library"
+      },
+      "summary": {
+        "ru": "Установка библиотеки через pip.",
+        "en": "Install a library with pip."
+      },
+      "category": "environment",
+      "tags": [
+        "pip",
+        "библиотеки"
+      ],
+      "rank": 20,
+      "updated": "2026-02-14",
+      "intro": [
+        {
+          "ru": "Библиотеки устанавливаются через pip внутри окружения.",
+          "en": "Libraries are installed with pip inside the environment."
+        }
+      ],
+      "links": [
+        {
+          "title": {
+            "ru": "pip install",
+            "en": "pip install"
+          },
+          "url": "https://pip.pypa.io/en/stable/cli/pip_install/"
+        }
+      ],
+      "steps": [
+        {
+          "title": {
+            "ru": "Установи библиотеку",
+            "en": "Install the library"
+          },
+          "text": {
+            "ru": "Например, requests.",
+            "en": "For example, requests."
+          },
+          "code": "python -m pip install requests",
+          "screenshot": {
+            "src": null,
+            "alt": {
+              "ru": "Скриншот",
+              "en": "Screenshot"
+            },
+            "note": {
+              "ru": "Установка requests.",
+              "en": "Installing requests."
+            }
+          }
+        },
+        {
+          "title": {
+            "ru": "Проверь установку",
+            "en": "Verify installation"
+          },
+          "text": {
+            "ru": "pip show показывает информацию о пакете.",
+            "en": "pip show prints package info."
+          },
+          "code": "python -m pip show requests",
+          "screenshot": {
+            "src": null,
+            "alt": {
+              "ru": "Скриншот",
+              "en": "Screenshot"
+            },
+            "note": {
+              "ru": "Вывод pip show requests.",
+              "en": "pip show requests output."
+            }
+          }
+        },
+        {
+          "title": {
+            "ru": "Проверь импорт",
+            "en": "Check import"
+          },
+          "text": {
+            "ru": "Библиотека должна импортироваться.",
+            "en": "The library should import."
+          },
+          "code": "python -c \"import requests; print(requests.__version__)\""
+        }
+      ],
+      "images": [],
+      "entries": [
+        "pip",
+        "pip-install",
+        "requests"
+      ]
+    },
+    {
+      "id": "save-dependencies",
+      "title": {
+        "ru": "Как сохранить зависимости",
+        "en": "How to save dependencies"
+      },
+      "summary": {
+        "ru": "Сохранение библиотек в requirements.txt.",
+        "en": "Save libraries to requirements.txt."
+      },
+      "category": "environment",
+      "tags": [
+        "pip",
+        "requirements"
+      ],
+      "rank": 30,
+      "updated": "2026-02-14",
+      "intro": [
+        {
+          "ru": "requirements.txt позволяет восстановить те же библиотеки.",
+          "en": "requirements.txt lets you restore the same libraries."
+        }
+      ],
+      "links": [
+        {
+          "title": {
+            "ru": "pip freeze",
+            "en": "pip freeze"
+          },
+          "url": "https://pip.pypa.io/en/stable/cli/pip_freeze/"
+        }
+      ],
+      "steps": [
+        {
+          "title": {
+            "ru": "Создай requirements.txt",
+            "en": "Create requirements.txt"
+          },
+          "text": {
+            "ru": "Сохраняет список пакетов.",
+            "en": "Saves the package list."
+          },
+          "code": "python -m pip freeze > requirements.txt",
+          "screenshot": {
+            "src": null,
+            "alt": {
+              "ru": "Скриншот",
+              "en": "Screenshot"
+            },
+            "note": {
+              "ru": "Файл requirements.txt создан.",
+              "en": "requirements.txt created."
+            }
+          }
+        },
+        {
+          "title": {
+            "ru": "Установи зависимости из файла",
+            "en": "Install from the file"
+          },
+          "text": {
+            "ru": "На другой машине.",
+            "en": "On another machine."
+          },
+          "code": "python -m pip install -r requirements.txt",
+          "screenshot": {
+            "src": null,
+            "alt": {
+              "ru": "Скриншот",
+              "en": "Screenshot"
+            },
+            "note": {
+              "ru": "Установка зависимостей.",
+              "en": "Installing dependencies."
+            }
+          }
+        }
+      ],
+      "images": [],
+      "entries": [
+        "pip-freeze",
+        "pip-install",
+        "pip"
+      ]
+    },
+    {
+      "id": "run-server",
+      "title": {
+        "ru": "Как запустить сервер",
+        "en": "How to run a server"
+      },
+      "summary": {
+        "ru": "Локальный HTTP-сервер для файлов.",
+        "en": "Local HTTP server for files."
+      },
+      "category": "web",
+      "tags": [
+        "server",
+        "http"
+      ],
+      "rank": 40,
+      "updated": "2026-02-14",
+      "intro": [
+        {
+          "ru": "Python умеет запускать простой сервер без установки программ.",
+          "en": "Python can run a simple server with no extra tools."
+        }
+      ],
+      "links": [
+        {
+          "title": {
+            "ru": "http.server",
+            "en": "http.server"
+          },
+          "url": "https://docs.python.org/3/library/http.server.html"
+        }
+      ],
+      "steps": [
+        {
+          "title": {
+            "ru": "Запусти сервер",
+            "en": "Start the server"
+          },
+          "text": {
+            "ru": "По умолчанию порт 8000.",
+            "en": "Default port is 8000."
+          },
+          "code": "python -m http.server 8000",
+          "screenshot": {
+            "src": null,
+            "alt": {
+              "ru": "Скриншот",
+              "en": "Screenshot"
+            },
+            "note": {
+              "ru": "Запуск сервера.",
+              "en": "Server started."
+            }
+          }
+        },
+        {
+          "title": {
+            "ru": "Открой в браузере",
+            "en": "Open in browser"
+          },
+          "text": {
+            "ru": "Перейди на localhost.",
+            "en": "Go to localhost."
+          },
+          "code": "http://localhost:8000",
+          "screenshot": {
+            "src": null,
+            "alt": {
+              "ru": "Скриншот",
+              "en": "Screenshot"
+            },
+            "note": {
+              "ru": "Открытый локальный сайт.",
+              "en": "Local site opened."
+            }
+          }
+        },
+        {
+          "title": {
+            "ru": "Останови сервер",
+            "en": "Stop the server"
+          },
+          "text": {
+            "ru": "Нажми Ctrl + C в терминале.",
+            "en": "Press Ctrl + C in the terminal."
+          },
+          "code": "Ctrl + C"
+        }
+      ],
+      "images": [],
+      "entries": [
+        "python-m-http-server",
+        "flask",
+        "fastapi"
+      ]
+    },
+    {
+      "id": "download-file",
+      "title": {
+        "ru": "Как скачать файл",
+        "en": "How to download a file"
+      },
+      "summary": {
+        "ru": "Скачивание через curl, wget и Python.",
+        "en": "Download with curl, wget and Python."
+      },
+      "category": "network",
+      "tags": [
+        "curl",
+        "wget",
+        "requests"
+      ],
+      "rank": 50,
+      "updated": "2026-02-14",
+      "intro": [
+        {
+          "ru": "Файл можно скачать из терминала или из кода.",
+          "en": "A file can be downloaded from the terminal or from code."
+        }
+      ],
+      "links": [
+        {
+          "title": {
+            "ru": "curl",
+            "en": "curl"
+          },
+          "url": "https://curl.se/"
+        },
+        {
+          "title": {
+            "ru": "requests",
+            "en": "requests"
+          },
+          "url": "https://docs.python-requests.org/"
+        }
+      ],
+      "steps": [
+        {
+          "title": {
+            "ru": "Скачать через curl",
+            "en": "Download with curl"
+          },
+          "text": {
+            "ru": "-O сохраняет имя файла.",
+            "en": "-O keeps the file name."
+          },
+          "code": "curl -O https://example.com/file.txt",
+          "screenshot": {
+            "src": null,
+            "alt": {
+              "ru": "Скриншот",
+              "en": "Screenshot"
+            },
+            "note": {
+              "ru": "Скачивание через curl.",
+              "en": "Downloading with curl."
+            }
+          }
+        },
+        {
+          "title": {
+            "ru": "Скачать через wget",
+            "en": "Download with wget"
+          },
+          "text": {
+            "ru": "wget тоже сохраняет файл.",
+            "en": "wget also saves the file."
+          },
+          "code": "wget https://example.com/file.txt"
+        },
+        {
+          "title": {
+            "ru": "Скачать через requests",
+            "en": "Download with requests"
+          },
+          "text": {
+            "ru": "Пример на Python.",
+            "en": "Python example."
+          },
+          "code": "import requests\n\nresponse = requests.get('https://example.com/file.txt')\n\nwith open('file.txt', 'wb') as f:\n    f.write(response.content)",
+          "screenshot": {
+            "src": null,
+            "alt": {
+              "ru": "Скриншот",
+              "en": "Screenshot"
+            },
+            "note": {
+              "ru": "Python-код скачивания.",
+              "en": "Python download code."
+            }
+          }
+        }
+      ],
+      "images": [],
+      "entries": [
+        "curl",
+        "wget",
+        "requests",
+        "urllib-request"
+      ]
+    },
+    {
+      "id": "handle-error",
+      "title": {
+        "ru": "Как обработать ошибку",
+        "en": "How to handle an error"
+      },
+      "summary": {
+        "ru": "Использование try, except, else и finally.",
+        "en": "Using try, except, else and finally."
+      },
+      "category": "core",
+      "tags": [
+        "try",
+        "except"
+      ],
+      "rank": 60,
+      "updated": "2026-02-14",
+      "intro": [
+        {
+          "ru": "Обработка ошибок не даёт программе падать.",
+          "en": "Error handling keeps the program from crashing."
+        }
+      ],
+      "links": [
+        {
+          "title": {
+            "ru": "Ошибки и исключения",
+            "en": "Errors and exceptions"
+          },
+          "url": "https://docs.python.org/3/tutorial/errors.html"
+        }
+      ],
+      "steps": [
+        {
+          "title": {
+            "ru": "Базовый try/except",
+            "en": "Basic try/except"
+          },
+          "text": {
+            "ru": "except выполняется при ошибке.",
+            "en": "except runs on error."
+          },
+          "code": "try:\n    number = int('abc')\nexcept ValueError:\n    print('Это не число')",
+          "screenshot": {
+            "src": null,
+            "alt": {
+              "ru": "Скриншот",
+              "en": "Screenshot"
+            },
+            "note": {
+              "ru": "Работа try/except.",
+              "en": "try/except in action."
+            }
+          }
+        },
+        {
+          "title": {
+            "ru": "Конкретная ошибка",
+            "en": "Specific error"
+          },
+          "text": {
+            "ru": "Лови конкретный тип ошибки.",
+            "en": "Catch a specific error type."
+          },
+          "code": "try:\n    file = open('missing.txt', encoding='utf-8')\nexcept FileNotFoundError:\n    print('Файл не найден')"
+        },
+        {
+          "title": {
+            "ru": "else и finally",
+            "en": "else and finally"
+          },
+          "text": {
+            "ru": "else — если ошибки не было, finally — всегда.",
+            "en": "else — when no error, finally — always."
+          },
+          "code": "try:\n    x = 10 / 2\nexcept ZeroDivisionError:\n    print('Деление на ноль')\nelse:\n    print('Ошибок нет')\nfinally:\n    print('Выполняется всегда')"
+        }
+      ],
+      "images": [],
+      "entries": [
+        "try",
+        "except",
+        "finally",
+        "raise",
+        "ValueError",
+        "FileNotFoundError",
+        "ZeroDivisionError"
+      ]
+    },
+    {
+      "id": "read-json",
+      "title": {
+        "ru": "Как прочитать JSON",
+        "en": "How to read JSON"
+      },
+      "summary": {
+        "ru": "Чтение JSON из файла, строки и HTTP.",
+        "en": "Read JSON from a file, string and HTTP."
+      },
+      "category": "data",
+      "tags": [
+        "json"
+      ],
+      "rank": 70,
+      "updated": "2026-02-14",
+      "intro": [
+        {
+          "ru": "В Python есть встроенный модуль json.",
+          "en": "Python has a built-in json module."
+        }
+      ],
+      "links": [
+        {
+          "title": {
+            "ru": "Модуль json",
+            "en": "json module"
+          },
+          "url": "https://docs.python.org/3/library/json.html"
+        }
+      ],
+      "steps": [
+        {
+          "title": {
+            "ru": "Из файла",
+            "en": "From a file"
+          },
+          "text": {
+            "ru": "Используй json.load().",
+            "en": "Use json.load()."
+          },
+          "code": "import json\n\nwith open('data.json', encoding='utf-8') as f:\n    data = json.load(f)\n\nprint(data)",
+          "screenshot": {
+            "src": null,
+            "alt": {
+              "ru": "Скриншот",
+              "en": "Screenshot"
+            },
+            "note": {
+              "ru": "Чтение JSON из файла.",
+              "en": "Reading JSON from a file."
+            }
+          }
+        },
+        {
+          "title": {
+            "ru": "Из строки",
+            "en": "From a string"
+          },
+          "text": {
+            "ru": "Используй json.loads().",
+            "en": "Use json.loads()."
+          },
+          "code": "import json\n\ntext = '{\"name\": \"Alice\"}'\ndata = json.loads(text)\n\nprint(data['name'])"
+        },
+        {
+          "title": {
+            "ru": "Из HTTP-ответа",
+            "en": "From an HTTP response"
+          },
+          "text": {
+            "ru": "requests: response.json().",
+            "en": "requests: response.json()."
+          },
+          "code": "import requests\n\nresponse = requests.get('https://api.example.com/data')\ndata = response.json()"
+        }
+      ],
+      "images": [],
+      "entries": [
+        "json",
+        "requests",
+        "open",
+        "file-read"
+      ]
+    },
+    {
+      "id": "write-csv",
+      "title": {
+        "ru": "Как записать CSV",
+        "en": "How to write CSV"
+      },
+      "summary": {
+        "ru": "Запись таблиц через модуль csv.",
+        "en": "Write tables with the csv module."
+      },
+      "category": "data",
+      "tags": [
+        "csv",
+        "файлы"
+      ],
+      "rank": 80,
+      "updated": "2026-02-14",
+      "intro": [
+        {
+          "ru": "CSV — простой табличный формат.",
+          "en": "CSV is a simple table format."
+        }
+      ],
+      "links": [
+        {
+          "title": {
+            "ru": "Модуль csv",
+            "en": "csv module"
+          },
+          "url": "https://docs.python.org/3/library/csv.html"
+        }
+      ],
+      "steps": [
+        {
+          "title": {
+            "ru": "Записать список списков",
+            "en": "Write a list of lists"
+          },
+          "text": {
+            "ru": "Каждый список — строка таблицы.",
+            "en": "Each list is a table row."
+          },
+          "code": "import csv\n\nrows = [\n    ['name', 'age'],\n    ['Alice', 30],\n    ['Bob', 25]\n]\n\nwith open('people.csv', 'w', encoding='utf-8', newline='') as f:\n    csv.writer(f).writerows(rows)",
+          "screenshot": {
+            "src": null,
+            "alt": {
+              "ru": "Скриншот",
+              "en": "Screenshot"
+            },
+            "note": {
+              "ru": "Запись CSV.",
+              "en": "Writing CSV."
+            }
+          }
+        },
+        {
+          "title": {
+            "ru": "Записать словари",
+            "en": "Write dictionaries"
+          },
+          "text": {
+            "ru": "DictWriter удобен для словарей.",
+            "en": "DictWriter is handy for dicts."
+          },
+          "code": "import csv\n\npeople = [\n    {'name': 'Alice', 'age': 30},\n    {'name': 'Bob', 'age': 25}\n]\n\nwith open('people.csv', 'w', encoding='utf-8', newline='') as f:\n    writer = csv.DictWriter(f, fieldnames=['name', 'age'])\n    writer.writeheader()\n    writer.writerows(people)"
+        }
+      ],
+      "images": [],
+      "entries": [
+        "csv",
+        "open",
+        "dict",
+        "file-write"
+      ]
+    },
+    {
+      "id": "create-project",
+      "title": {
+        "ru": "Как создать проект",
+        "en": "How to create a project"
+      },
+      "summary": {
+        "ru": "Пошаговое создание нового Python-проекта.",
+        "en": "Step-by-step creation of a new Python project."
+      },
+      "category": "environment",
+      "tags": [
+        "проект",
+        "project"
+      ],
+      "rank": 90,
+      "updated": "2026-02-14",
+      "intro": [
+        {
+          "ru": "Проект начинается с папки, окружения и главного файла.",
+          "en": "A project starts with a folder, an environment and a main file."
+        }
+      ],
+      "links": [
+        {
+          "title": {
+            "ru": "Документация venv",
+            "en": "venv documentation"
+          },
+          "url": "https://docs.python.org/3/library/venv.html"
+        }
+      ],
+      "steps": [
+        {
+          "title": {
+            "ru": "Создай папку проекта",
+            "en": "Create the project folder"
+          },
+          "text": {
+            "ru": "И перейди в неё.",
+            "en": "And go into it."
+          },
+          "code": "mkdir my_project\ncd my_project",
+          "screenshot": {
+            "src": null,
+            "alt": {
+              "ru": "Скриншот",
+              "en": "Screenshot"
+            },
+            "note": {
+              "ru": "Создание папки проекта.",
+              "en": "Creating the project folder."
+            }
+          }
+        },
+        {
+          "title": {
+            "ru": "Создай окружение",
+            "en": "Create the environment"
+          },
+          "text": {
+            "ru": "И активируй его.",
+            "en": "And activate it."
+          },
+          "code": "python -m venv .venv\n.venv\\Scripts\\activate"
+        },
+        {
+          "title": {
+            "ru": "Создай main.py",
+            "en": "Create main.py"
+          },
+          "text": {
+            "ru": "Первый файл проекта.",
+            "en": "The first project file."
+          },
+          "code": "print('Hello, project!')",
+          "screenshot": {
+            "src": null,
+            "alt": {
+              "ru": "Скриншот",
+              "en": "Screenshot"
+            },
+            "note": {
+              "ru": "Файл main.py в редакторе.",
+              "en": "main.py in the editor."
+            }
+          }
+        },
+        {
+          "title": {
+            "ru": "Запусти проект",
+            "en": "Run the project"
+          },
+          "text": {
+            "ru": "Выполни файл.",
+            "en": "Run the file."
+          },
+          "code": "python main.py",
+          "screenshot": {
+            "src": null,
+            "alt": {
+              "ru": "Скриншот",
+              "en": "Screenshot"
+            },
+            "note": {
+              "ru": "Запуск main.py.",
+              "en": "Running main.py."
+            }
+          }
+        }
+      ],
+      "images": [],
+      "entries": [
+        "python",
+        "python-m-venv",
+        "pip-install"
+      ]
+    },
+    {
+      "id": "install-flask",
+      "title": {
+        "ru": "Как установить Flask",
+        "en": "How to install Flask"
+      },
+      "summary": {
+        "ru": "Установка Flask и первый веб-сервер.",
+        "en": "Install Flask and run a first web server."
+      },
+      "category": "web",
+      "tags": [
+        "flask",
+        "web"
+      ],
+      "rank": 100,
+      "updated": "2026-02-14",
+      "intro": [
+        {
+          "ru": "Flask — лёгкий веб-фреймворк.",
+          "en": "Flask is a lightweight web framework."
+        }
+      ],
+      "links": [
+        {
+          "title": {
+            "ru": "Документация Flask",
+            "en": "Flask documentation"
+          },
+          "url": "https://flask.palletsprojects.com/"
+        }
+      ],
+      "steps": [
+        {
+          "title": {
+            "ru": "Установи Flask",
+            "en": "Install Flask"
+          },
+          "text": {
+            "ru": "Внутри виртуального окружения.",
+            "en": "Inside the virtual environment."
+          },
+          "code": "python -m pip install flask",
+          "screenshot": {
+            "src": null,
+            "alt": {
+              "ru": "Скриншот",
+              "en": "Screenshot"
+            },
+            "note": {
+              "ru": "Установка Flask.",
+              "en": "Installing Flask."
+            }
+          }
+        },
+        {
+          "title": {
+            "ru": "Создай app.py",
+            "en": "Create app.py"
+          },
+          "text": {
+            "ru": "Минимальное приложение.",
+            "en": "Minimal app."
+          },
+          "code": "from flask import Flask\n\napp = Flask(__name__)\n\n@app.route('/')\ndef hello():\n    return 'Hello, Flask!'",
+          "screenshot": {
+            "src": null,
+            "alt": {
+              "ru": "Скриншот",
+              "en": "Screenshot"
+            },
+            "note": {
+              "ru": "Код app.py.",
+              "en": "app.py code."
+            }
+          }
+        },
+        {
+          "title": {
+            "ru": "Запусти сервер",
+            "en": "Run the server"
+          },
+          "text": {
+            "ru": "Запуск Flask.",
+            "en": "Run Flask."
+          },
+          "code": "flask --app app run"
+        },
+        {
+          "title": {
+            "ru": "Открой сайт",
+            "en": "Open the site"
+          },
+          "text": {
+            "ru": "По умолчанию порт 5000.",
+            "en": "Default port is 5000."
+          },
+          "code": "http://127.0.0.1:5000",
+          "screenshot": {
+            "src": null,
+            "alt": {
+              "ru": "Скриншот",
+              "en": "Screenshot"
+            },
+            "note": {
+              "ru": "Страница Hello, Flask!.",
+              "en": "Hello, Flask! page."
+            }
+          }
+        }
+      ],
+      "images": [],
+      "entries": [
+        "flask",
+        "pip-install"
+      ]
+    },
+    {
+      "id": "install-fastapi",
+      "title": {
+        "ru": "Как установить FastAPI",
+        "en": "How to install FastAPI"
+      },
+      "summary": {
+        "ru": "Установка FastAPI и запуск API.",
+        "en": "Install FastAPI and run an API."
+      },
+      "category": "web",
+      "tags": [
+        "fastapi",
+        "api"
+      ],
+      "rank": 110,
+      "updated": "2026-02-14",
+      "intro": [
+        {
+          "ru": "FastAPI — современный фреймворк для API.",
+          "en": "FastAPI is a modern API framework."
+        }
+      ],
+      "links": [
+        {
+          "title": {
+            "ru": "Документация FastAPI",
+            "en": "FastAPI documentation"
+          },
+          "url": "https://fastapi.tiangolo.com/"
+        }
+      ],
+      "steps": [
+        {
+          "title": {
+            "ru": "Установи FastAPI и uvicorn",
+            "en": "Install FastAPI and uvicorn"
+          },
+          "text": {
+            "ru": "uvicorn — сервер для запуска.",
+            "en": "uvicorn is the runtime server."
+          },
+          "code": "python -m pip install fastapi uvicorn",
+          "screenshot": {
+            "src": null,
+            "alt": {
+              "ru": "Скриншот",
+              "en": "Screenshot"
+            },
+            "note": {
+              "ru": "Установка FastAPI.",
+              "en": "Installing FastAPI."
+            }
+          }
+        },
+        {
+          "title": {
+            "ru": "Создай main.py",
+            "en": "Create main.py"
+          },
+          "text": {
+            "ru": "Минимальный API.",
+            "en": "Minimal API."
+          },
+          "code": "from fastapi import FastAPI\n\napp = FastAPI()\n\n@app.get('/')\ndef hello():\n    return {'message': 'Hello, FastAPI!'}"
+        },
+        {
+          "title": {
+            "ru": "Запусти сервер",
+            "en": "Run the server"
+          },
+          "text": {
+            "ru": "С автоперезагрузкой.",
+            "en": "With auto-reload."
+          },
+          "code": "uvicorn main:app --reload",
+          "screenshot": {
+            "src": null,
+            "alt": {
+              "ru": "Скриншот",
+              "en": "Screenshot"
+            },
+            "note": {
+              "ru": "Запуск uvicorn.",
+              "en": "Running uvicorn."
+            }
+          }
+        },
+        {
+          "title": {
+            "ru": "Открой документацию",
+            "en": "Open the docs"
+          },
+          "text": {
+            "ru": "FastAPI даёт документацию автоматически.",
+            "en": "FastAPI provides docs automatically."
+          },
+          "code": "http://127.0.0.1:8000/docs",
+          "screenshot": {
+            "src": null,
+            "alt": {
+              "ru": "Скриншот",
+              "en": "Screenshot"
+            },
+            "note": {
+              "ru": "Swagger-документация.",
+              "en": "Swagger docs."
+            }
+          }
+        }
+      ],
+      "images": [],
+      "entries": [
+        "fastapi",
+        "pip-install"
+      ]
+    },
+    {
+      "id": "github",
+      "title": {
+        "ru": "Как работать с GitHub",
+        "en": "How to work with GitHub"
+      },
+      "summary": {
+        "ru": "Подключение проекта к GitHub и отправка кода.",
+        "en": "Connect a project to GitHub and push code."
+      },
+      "category": "dev-tools",
+      "tags": [
+        "git",
+        "github"
+      ],
+      "rank": 120,
+      "updated": "2026-02-14",
+      "intro": [
+        {
+          "ru": "GitHub хранит код и историю изменений.",
+          "en": "GitHub stores code and its history."
+        }
+      ],
+      "links": [
+        {
+          "title": {
+            "ru": "Документация Git",
+            "en": "Git documentation"
+          },
+          "url": "https://git-scm.com/doc"
+        },
+        {
+          "title": {
+            "ru": "GitHub",
+            "en": "GitHub"
+          },
+          "url": "https://github.com/"
+        }
+      ],
+      "steps": [
+        {
+          "title": {
+            "ru": "Настрой Git",
+            "en": "Configure Git"
+          },
+          "text": {
+            "ru": "Укажи имя и email.",
+            "en": "Set your name and email."
+          },
+          "code": "git config --global user.name 'Your Name'\ngit config --global user.email 'you@example.com'",
+          "screenshot": {
+            "src": null,
+            "alt": {
+              "ru": "Скриншот",
+              "en": "Screenshot"
+            },
+            "note": {
+              "ru": "Настройка git config.",
+              "en": "git config setup."
+            }
+          }
+        },
+        {
+          "title": {
+            "ru": "Создай репозиторий на GitHub",
+            "en": "Create a GitHub repository"
+          },
+          "text": {
+            "ru": "Создай пустой репозиторий на сайте.",
+            "en": "Create an empty repository on the site."
+          },
+          "screenshot": {
+            "src": null,
+            "alt": {
+              "ru": "Скриншот",
+              "en": "Screenshot"
+            },
+            "note": {
+              "ru": "Страница создания репозитория.",
+              "en": "Repository creation page."
+            }
+          }
+        },
+        {
+          "title": {
+            "ru": "Свяжи проект с GitHub",
+            "en": "Link the project to GitHub"
+          },
+          "text": {
+            "ru": "Инициализация и первый коммит.",
+            "en": "Init and first commit."
+          },
+          "code": "git init\ngit add .\ngit commit -m 'first commit'\ngit branch -M main\ngit remote add origin https://github.com/USER/REPO.git"
+        },
+        {
+          "title": {
+            "ru": "Отправь код",
+            "en": "Push the code"
+          },
+          "text": {
+            "ru": "Первая отправка на GitHub.",
+            "en": "First push to GitHub."
+          },
+          "code": "git push -u origin main",
+          "screenshot": {
+            "src": null,
+            "alt": {
+              "ru": "Скриншот",
+              "en": "Screenshot"
+            },
+            "note": {
+              "ru": "Код на GitHub.",
+              "en": "Code on GitHub."
+            }
+          }
+        }
+      ],
+      "images": [],
+      "entries": [
+        "git",
+        "git-init",
+        "git-clone",
+        "git-push"
+      ]
+    },
+    {
+      "id": "git-commit",
+      "title": {
+        "ru": "Как сделать git commit",
+        "en": "How to make a git commit"
+      },
+      "summary": {
+        "ru": "Сохранение изменений в истории Git.",
+        "en": "Save changes to Git history."
+      },
+      "category": "dev-tools",
+      "tags": [
+        "git",
+        "commit"
+      ],
+      "rank": 130,
+      "updated": "2026-02-14",
+      "intro": [
+        {
+          "ru": "Коммит — это снимок изменений проекта.",
+          "en": "A commit is a snapshot of project changes."
+        }
+      ],
+      "links": [
+        {
+          "title": {
+            "ru": "git commit",
+            "en": "git commit"
+          },
+          "url": "https://git-scm.com/docs/git-commit"
+        }
+      ],
+      "steps": [
+        {
+          "title": {
+            "ru": "Посмотри изменения",
+            "en": "See changes"
+          },
+          "text": {
+            "ru": "git status показывает изменённые файлы.",
+            "en": "git status shows modified files."
+          },
+          "code": "git status",
+          "screenshot": {
+            "src": null,
+            "alt": {
+              "ru": "Скриншот",
+              "en": "Screenshot"
+            },
+            "note": {
+              "ru": "Вывод git status.",
+              "en": "git status output."
+            }
+          }
+        },
+        {
+          "title": {
+            "ru": "Добавь файлы",
+            "en": "Stage files"
+          },
+          "text": {
+            "ru": "Добавь все изменения.",
+            "en": "Stage all changes."
+          },
+          "code": "git add ."
+        },
+        {
+          "title": {
+            "ru": "Сделай коммит",
+            "en": "Commit"
+          },
+          "text": {
+            "ru": "Опиши изменение.",
+            "en": "Describe the change."
+          },
+          "code": "git commit -m 'Добавлен main.py'",
+          "screenshot": {
+            "src": null,
+            "alt": {
+              "ru": "Скриншот",
+              "en": "Screenshot"
+            },
+            "note": {
+              "ru": "Вывод git commit.",
+              "en": "git commit output."
+            }
+          }
+        },
+        {
+          "title": {
+            "ru": "Отправь на GitHub",
+            "en": "Push to GitHub"
+          },
+          "text": {
+            "ru": "Если есть удалённый репозиторий.",
+            "en": "If a remote exists."
+          },
+          "code": "git push"
+        }
+      ],
+      "images": [],
+      "entries": [
+        "git",
+        "git-add",
+        "git-status",
+        "git-push"
+      ]
+    },
+    {
+      "id": "http-request",
+      "title": {
+        "ru": "Как отправить HTTP-запрос",
+        "en": "How to send an HTTP request"
+      },
+      "summary": {
+        "ru": "GET и POST запросы через requests.",
+        "en": "GET and POST requests with requests."
+      },
+      "category": "network",
+      "tags": [
+        "requests",
+        "http",
+        "api"
+      ],
+      "rank": 140,
+      "updated": "2026-02-14",
+      "intro": [
+        {
+          "ru": "requests — самый удобный способ делать HTTP-запросы.",
+          "en": "requests is the most convenient way to make HTTP requests."
+        }
+      ],
+      "links": [
+        {
+          "title": {
+            "ru": "Документация requests",
+            "en": "requests documentation"
+          },
+          "url": "https://docs.python-requests.org/"
+        }
+      ],
+      "steps": [
+        {
+          "title": {
+            "ru": "GET-запрос",
+            "en": "GET request"
+          },
+          "text": {
+            "ru": "Получение данных.",
+            "en": "Fetching data."
+          },
+          "code": "import requests\n\nresponse = requests.get('https://api.example.com/data')\nprint(response.status_code)\nprint(response.json())",
+          "screenshot": {
+            "src": null,
+            "alt": {
+              "ru": "Скриншот",
+              "en": "Screenshot"
+            },
+            "note": {
+              "ru": "GET-запрос и ответ.",
+              "en": "GET request and response."
+            }
+          }
+        },
+        {
+          "title": {
+            "ru": "GET с параметрами",
+            "en": "GET with params"
+          },
+          "text": {
+            "ru": "Параметры передаются в URL.",
+            "en": "Params go into the URL."
+          },
+          "code": "params = {'q': 'python'}\nresponse = requests.get('https://api.example.com/search', params=params)"
+        },
+        {
+          "title": {
+            "ru": "POST с JSON",
+            "en": "POST with JSON"
+          },
+          "text": {
+            "ru": "Отправка данных.",
+            "en": "Sending data."
+          },
+          "code": "payload = {'name': 'Alice'}\nresponse = requests.post('https://api.example.com/users', json=payload)",
+          "screenshot": {
+            "src": null,
+            "alt": {
+              "ru": "Скриншот",
+              "en": "Screenshot"
+            },
+            "note": {
+              "ru": "POST-запрос.",
+              "en": "POST request."
+            }
+          }
+        }
+      ],
+      "images": [],
+      "entries": [
+        "requests",
+        "curl",
+        "urllib-request",
+        "httpx"
+      ]
+    },
+    {
+      "id": "telegram-bot",
+      "title": {
+        "ru": "Как создать Telegram-бота",
+        "en": "How to create a Telegram bot"
+      },
+      "summary": {
+        "ru": "Простой бот на pyTelegramBotAPI.",
+        "en": "A simple bot with pyTelegramBotAPI."
+      },
+      "category": "bots",
+      "tags": [
+        "telegram",
+        "bot"
+      ],
+      "rank": 150,
+      "updated": "2026-02-14",
+      "intro": [
+        {
+          "ru": "Бот создаётся через BotFather и управляется токеном.",
+          "en": "A bot is created via BotFather and controlled by a token."
+        }
+      ],
+      "links": [
+        {
+          "title": {
+            "ru": "BotFather",
+            "en": "BotFather"
+          },
+          "url": "https://t.me/BotFather"
+        },
+        {
+          "title": {
+            "ru": "pyTelegramBotAPI",
+            "en": "pyTelegramBotAPI"
+          },
+          "url": "https://github.com/eternnoir/pyTelegramBotAPI"
+        }
+      ],
+      "steps": [
+        {
+          "title": {
+            "ru": "Создай бота в BotFather",
+            "en": "Create a bot in BotFather"
+          },
+          "text": {
+            "ru": "Команда /newbot даёт токен.",
+            "en": "The /newbot command gives a token."
+          },
+          "screenshot": {
+            "src": null,
+            "alt": {
+              "ru": "Скриншот",
+              "en": "Screenshot"
+            },
+            "note": {
+              "ru": "Диалог с BotFather и токен.",
+              "en": "BotFather dialog and token."
+            }
+          }
+        },
+        {
+          "title": {
+            "ru": "Установи библиотеку",
+            "en": "Install the library"
+          },
+          "text": {
+            "ru": "pyTelegramBotAPI.",
+            "en": "pyTelegramBotAPI."
+          },
+          "code": "python -m pip install pyTelegramBotAPI"
+        },
+        {
+          "title": {
+            "ru": "Создай bot.py",
+            "en": "Create bot.py"
+          },
+          "text": {
+            "ru": "Вставь свой токен вместо TOKEN.",
+            "en": "Replace TOKEN with your token."
+          },
+          "code": "import telebot\n\nbot = telebot.TeleBot('TOKEN')\n\n@bot.message_handler(commands=['start'])\ndef start(message):\n    bot.reply_to(message, 'Hello!')\n\nbot.infinity_polling()",
+          "screenshot": {
+            "src": null,
+            "alt": {
+              "ru": "Скриншот",
+              "en": "Screenshot"
+            },
+            "note": {
+              "ru": "Код bot.py.",
+              "en": "bot.py code."
+            }
+          }
+        },
+        {
+          "title": {
+            "ru": "Запусти бота",
+            "en": "Run the bot"
+          },
+          "text": {
+            "ru": "Бот начнёт отвечать в Telegram.",
+            "en": "The bot starts replying in Telegram."
+          },
+          "code": "python bot.py",
+          "screenshot": {
+            "src": null,
+            "alt": {
+              "ru": "Скриншот",
+              "en": "Screenshot"
+            },
+            "note": {
+              "ru": "Ответ бота в Telegram.",
+              "en": "Bot reply in Telegram."
+            }
+          }
+        }
+      ],
+      "images": [],
+      "entries": [
+        "python-telegram-bot",
+        "aiogram"
+      ]
+    },
+    {
+      "id": "sqlite",
+      "title": {
+        "ru": "Как работать с базой SQLite",
+        "en": "How to work with a SQLite database"
+      },
+      "summary": {
+        "ru": "Создание таблицы, запись и чтение данных.",
+        "en": "Create a table, insert and read data."
+      },
+      "category": "data",
+      "tags": [
+        "sqlite",
+        "база"
+      ],
+      "rank": 160,
+      "updated": "2026-02-14",
+      "intro": [
+        {
+          "ru": "SQLite — встроенная база данных, не требующая сервера.",
+          "en": "SQLite is a built-in serverless database."
+        }
+      ],
+      "links": [
+        {
+          "title": {
+            "ru": "Модуль sqlite3",
+            "en": "sqlite3 module"
+          },
+          "url": "https://docs.python.org/3/library/sqlite3.html"
+        }
+      ],
+      "steps": [
+        {
+          "title": {
+            "ru": "Создай таблицу",
+            "en": "Create a table"
+          },
+          "text": {
+            "ru": "Подключение и создание таблицы.",
+            "en": "Connect and create a table."
+          },
+          "code": "import sqlite3\n\nconn = sqlite3.connect('app.db')\ncursor = conn.cursor()\n\ncursor.execute('''\nCREATE TABLE IF NOT EXISTS users (\n    id INTEGER PRIMARY KEY,\n    name TEXT\n)\n''')\nconn.commit()",
+          "screenshot": {
+            "src": null,
+            "alt": {
+              "ru": "Скриншот",
+              "en": "Screenshot"
+            },
+            "note": {
+              "ru": "Создание таблицы users.",
+              "en": "Creating the users table."
+            }
+          }
+        },
+        {
+          "title": {
+            "ru": "Добавь данные",
+            "en": "Insert data"
+          },
+          "text": {
+            "ru": "Используй параметры ?.",
+            "en": "Use ? placeholders."
+          },
+          "code": "cursor.execute(\"INSERT INTO users (name) VALUES (?)\", ('Alice',))\nconn.commit()"
+        },
+        {
+          "title": {
+            "ru": "Прочитай данные",
+            "en": "Read data"
+          },
+          "text": {
+            "ru": "SELECT возвращает строки.",
+            "en": "SELECT returns rows."
+          },
+          "code": "cursor.execute(\"SELECT id, name FROM users\")\nprint(cursor.fetchall())",
+          "screenshot": {
+            "src": null,
+            "alt": {
+              "ru": "Скриншот",
+              "en": "Screenshot"
+            },
+            "note": {
+              "ru": "Вывод данных из базы.",
+              "en": "Data output from the database."
+            }
+          }
+        },
+        {
+          "title": {
+            "ru": "Закрой соединение",
+            "en": "Close the connection"
+          },
+          "text": {
+            "ru": "Всегда закрывай соединение.",
+            "en": "Always close the connection."
+          },
+          "code": "conn.close()"
+        }
+      ],
+      "images": [],
+      "entries": [
+        "sqlite3"
+      ]
+    },
+    {
+      "id": "logging",
+      "title": {
+        "ru": "Как логировать ошибки",
+        "en": "How to log errors"
+      },
+      "summary": {
+        "ru": "Логирование в консоль и файл.",
+        "en": "Logging to console and file."
+      },
+      "category": "core",
+      "tags": [
+        "logging",
+        "ошибки"
+      ],
+      "rank": 170,
+      "updated": "2026-02-14",
+      "intro": [
+        {
+          "ru": "logging лучше, чем print, для отслеживания работы программы.",
+          "en": "logging is better than print for tracking program behavior."
+        }
+      ],
+      "links": [
+        {
+          "title": {
+            "ru": "Модуль logging",
+            "en": "logging module"
+          },
+          "url": "https://docs.python.org/3/library/logging.html"
+        }
+      ],
+      "steps": [
+        {
+          "title": {
+            "ru": "Базовая настройка",
+            "en": "Basic setup"
+          },
+          "text": {
+            "ru": "Уровни: info, warning, error.",
+            "en": "Levels: info, warning, error."
+          },
+          "code": "import logging\n\nlogging.basicConfig(\n    level=logging.INFO,\n    format='%(asctime)s %(levelname)s %(message)s'\n)\n\nlogging.info('Старт')\nlogging.warning('Предупреждение')\nlogging.error('Ошибка')",
+          "screenshot": {
+            "src": null,
+            "alt": {
+              "ru": "Скриншот",
+              "en": "Screenshot"
+            },
+            "note": {
+              "ru": "Вывод логов в консоль.",
+              "en": "Console log output."
+            }
+          }
+        },
+        {
+          "title": {
+            "ru": "Логируй исключения",
+            "en": "Log exceptions"
+          },
+          "text": {
+            "ru": "logging.exception пишет текст ошибки.",
+            "en": "logging.exception writes the error text."
+          },
+          "code": "try:\n    1 / 0\nexcept ZeroDivisionError:\n    logging.exception('Ошибка деления')"
+        },
+        {
+          "title": {
+            "ru": "Запись в файл",
+            "en": "Write to a file"
+          },
+          "text": {
+            "ru": "Логи сохраняются в app.log.",
+            "en": "Logs are saved to app.log."
+          },
+          "code": "logging.basicConfig(filename='app.log', encoding='utf-8', level=logging.INFO)",
+          "screenshot": {
+            "src": null,
+            "alt": {
+              "ru": "Скриншот",
+              "en": "Screenshot"
+            },
+            "note": {
+              "ru": "Файл app.log с логами.",
+              "en": "app.log file with logs."
+            }
+          }
+        }
+      ],
+      "images": [],
+      "entries": [
+        "logging",
+        "try",
+        "except"
+      ]
+    },
+    {
+      "id": "tests",
+      "title": {
+        "ru": "Как запускать тесты",
+        "en": "How to run tests"
+      },
+      "summary": {
+        "ru": "Простые тесты с pytest.",
+        "en": "Simple tests with pytest."
+      },
+      "category": "testing",
+      "tags": [
+        "pytest",
+        "тесты"
+      ],
+      "rank": 180,
+      "updated": "2026-02-14",
+      "intro": [
+        {
+          "ru": "Тесты проверяют, что код работает как ожидается.",
+          "en": "Tests verify that code works as expected."
+        }
+      ],
+      "links": [
+        {
+          "title": {
+            "ru": "Документация pytest",
+            "en": "pytest documentation"
+          },
+          "url": "https://docs.pytest.org/"
+        }
+      ],
+      "steps": [
+        {
+          "title": {
+            "ru": "Установи pytest",
+            "en": "Install pytest"
+          },
+          "text": {
+            "ru": "Внутри окружения.",
+            "en": "Inside the environment."
+          },
+          "code": "python -m pip install pytest",
+          "screenshot": {
+            "src": null,
+            "alt": {
+              "ru": "Скриншот",
+              "en": "Screenshot"
+            },
+            "note": {
+              "ru": "Установка pytest.",
+              "en": "Installing pytest."
+            }
+          }
+        },
+        {
+          "title": {
+            "ru": "Создай test_app.py",
+            "en": "Create test_app.py"
+          },
+          "text": {
+            "ru": "Имя файла должно начинаться с test_.",
+            "en": "The file name must start with test_."
+          },
+          "code": "def add(a, b):\n    return a + b\n\ndef test_add():\n    assert add(2, 2) == 4",
+          "screenshot": {
+            "src": null,
+            "alt": {
+              "ru": "Скриншот",
+              "en": "Screenshot"
+            },
+            "note": {
+              "ru": "Код test_app.py.",
+              "en": "test_app.py code."
+            }
+          }
+        },
+        {
+          "title": {
+            "ru": "Запусти тесты",
+            "en": "Run tests"
+          },
+          "text": {
+            "ru": "pytest найдёт все test_-файлы.",
+            "en": "pytest finds all test_ files."
+          },
+          "code": "pytest",
+          "screenshot": {
+            "src": null,
+            "alt": {
+              "ru": "Скриншот",
+              "en": "Screenshot"
+            },
+            "note": {
+              "ru": "Результат запуска pytest.",
+              "en": "pytest run result."
+            }
+          }
+        },
+        {
+          "title": {
+            "ru": "Подробный вывод",
+            "en": "Verbose output"
+          },
+          "text": {
+            "ru": "Флаг -v показывает детали.",
+            "en": "The -v flag shows details."
+          },
+          "code": "pytest -v"
+        }
+      ],
+      "images": [],
+      "entries": [
+        "pytest",
+        "assert"
+      ]
+    }
+  ]
+}

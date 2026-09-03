@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <script>
+    (async () => {
+      const APP_VERSION = "pyref-v12";
+      if (localStorage.getItem("pyref_app_version") === APP_VERSION) return;
+      localStorage.setItem("pyref_app_version", APP_VERSION);
+      try {
+        if ("serviceWorker" in navigator) {
+          const regs = await navigator.serviceWorker.getRegistrations();
+          await Promise.all(regs.map(r => r.unregister()));
+        }
+        if ("caches" in window) {
+          const keys = await caches.keys();
+          await Promise.all(keys.map(k => caches.delete(k)));
+        }
+      } catch (e) {}
+      location.reload();
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#111827">
+  <title>PyReference</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icons/icon-192.png">
+  <link rel="apple-touch-icon" href="assets/icons/icon-180.png">
+  <link rel="stylesheet" href="assets/css/style.css?v=12">
+</head>
+<body>
+  <header>
+    <div class="top">
+      <button id="menuBtn" class="iconBtn" aria-label="Menu">☰</button>
+      <h1 data-i18n="appTitle">PyReference</h1>
+      <button id="favFilterBtn" class="iconBtn" aria-label="Favorites">☆</button>
+    </div>
+    <input id="search" type="search" placeholder="Поиск..." data-i18n-placeholder="searchPlaceholder" autocomplete="off">
+    <div class="filters">
+      <select id="typeFilter" aria-label="Type filter"></select>
+      <select id="categoryFilter" aria-label="Category filter"></select>
+    </div>
+    <div id="meta" class="meta"></div>
+  </header>
+
+  <div id="drawer" class="drawer">
+    <div id="drawerBackdrop" class="drawerBackdrop"></div>
+    <div class="drawerPanel">
+      <div class="top">
+        <strong data-i18n="menu">Меню</strong>
+        <button id="closeDrawerBtn" class="iconBtn" aria-label="Close">✕</button>
+      </div>
+
+      <div id="userBox" class="section"></div>
+
+      <div class="section">
+        <button id="navHome" class="menuBtn" data-i18n="home">Справочник</button>
+        <button id="navFavorites" class="menuBtn" data-i18n="favorites">Избранное</button>
+        <a id="navArticles" href="articles.html" class="menuBtn" disabled>Полезные статьи (закрыто)</a>
+        <button id="installBtn" class="menuBtn" hidden data-i18n="install">Установить приложение</button>
+      </div>
+
+      <div class="section">
+        <label for="langSelect" data-i18n="language">Язык</label>
+        <select id="langSelect">
+          <option value="ru">Русский</option>
+          <option value="en">English</option>
+        </select>
+      </div>
+
+      <div class="section">
+        <label for="apiBase" data-i18n="server">Сервер для синхронизации</label>
+        <input id="apiBase" placeholder="http://192.168.1.20:8000">
+      </div>
+
+      <div class="section">
+        <div data-i18n="notifications">Уведомления</div>
+        <label class="switch">
+          <input type="checkbox" id="notifyPython">
+          <span data-i18n="notifyPython">Сообщать о новых версиях Python</span>
+        </label>
+        <label class="switch muted">
+          <input type="checkbox" id="notifyNews" disabled>
+          <span data-i18n="notifyNews">Новости программирования (скоро)</span>
+        </label>
+      </div>
+
+      <div id="pythonVersionBox" class="section"></div>
+
+      <div class="section supportBox">
+        <div class="label">Связь / Поддержка</div>
+        <a class="supportEmail" href="mailto:aphitekrop@gmail.com">aphitekrop@gmail.com</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="list" aria-live="polite"></main>
+
+  <script src="assets/js/core.js?v=12"></script>
+  <script src="assets/js/index.js?v=12"></script>
+</body>
+</html>

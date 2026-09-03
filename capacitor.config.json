@@ -1,0 +1,8 @@
+{
+  "appId": "com.pyreference.app",
+  "appName": "PyReference",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  }
+}

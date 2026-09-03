@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <script>
+    (async () => {
+      const APP_VERSION = "pyref-v13";
+      if (localStorage.getItem("pyref_app_version") === APP_VERSION) return;
+      localStorage.setItem("pyref_app_version", APP_VERSION);
+      try {
+        if ("serviceWorker" in navigator) {
+          const regs = await navigator.serviceWorker.getRegistrations();
+          await Promise.all(regs.map(r => r.unregister()));
+        }
+        if ("caches" in window) {
+          const keys = await caches.keys();
+          await Promise.all(keys.map(k => caches.delete(k)));
+        }
+      } catch (e) {}
+      location.reload();
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#111827">
+  <title>Вход — PyReference</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icons/icon-192.png">
+  <link rel="apple-touch-icon" href="assets/icons/icon-180.png">
+  <link rel="stylesheet" href="assets/css/style.css?v=13">
+</head>
+<body>
+  <header>
+    <div class="top">
+      <a class="iconBtn" href="index.html" aria-label="Назад">←</a>
+      <h1 data-i18n="loginTitle">Вход</h1>
+      <span class="topSpacer"></span>
+    </div>
+  </header>
+
+  <main class="authMain">
+    <div class="authCard">
+      <div class="authLogo">🐍</div>
+      <h2 class="authTitle">PyReference</h2>
+      <p class="authSubtitle">Сохраняйте избранное и синхронизируйте его</p>
+
+      <form id="authForm">
+        <input id="authName" placeholder="Имя">
+        <input id="authEmail" type="email" required placeholder="Email">
+        <input id="authPassword" type="password" minlength="6" placeholder="Пароль (от 6 символов)">
+
+        <div id="authError" class="authError" hidden></div>
+
+        <div class="authActions">
+          <button type="submit" data-action="login" class="primaryBtn" data-i18n="login">Войти</button>
+          <button type="submit" data-action="register" class="secondaryBtn" data-i18n="register">Регистрация</button>
+        </div>
+      </form>
+
+      <div class="authDivider"><span>или</span></div>
+
+      <div class="socialLogin">
+        <button class="socialBtn" id="localLoginBtn">📱 <span>Войти локально</span></button>
+        <button class="socialBtn" id="upgradeBtn" hidden>☁️ <span>Привязать к серверу</span></button>
+        <button class="socialBtn" disabled>🔵 <span>Google — скоро</span></button>
+        <button class="socialBtn" disabled>⚫ <span>GitHub — скоро</span></button>
+      </div>
+    </div>
+  </main>
+
+  <script src="assets/js/core.js?v=13"></script>
+  <script src="assets/js/login.js?v=13"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "PyReference — справочник по Python",
+  "short_name": "PyReference",
+  "description": "Офлайн-справочник по Python: ключевые слова, функции, типы, модули, команды терминала и библиотеки.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#111827",
+  "lang": "ru",
+  "icons": []
+}

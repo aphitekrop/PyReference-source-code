@@ -1,0 +1,19 @@
+pyreference/
+├── articles.html
+├── article.html
+├── data/
+│   └── articles.json
+├── scripts/
+│   └── build_articles.py
+└── assets/
+    ├── css/
+    │   └── style.css
+    ├── js/
+    │   ├── articles.js
+    │   └── article.js
+    └── img/
+
+python scripts/build_entries.py
+python scripts/enhance_entries.py
+python scripts/expand_entries.py
+python server.py

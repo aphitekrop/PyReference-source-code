@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <script>
+    (async () => {
+      const APP_VERSION = "pyref-v11";
+      if (localStorage.getItem("pyref_app_version") === APP_VERSION) return;
+      localStorage.setItem("pyref_app_version", APP_VERSION);
+      try {
+        if ("serviceWorker" in navigator) {
+          const regs = await navigator.serviceWorker.getRegistrations();
+          await Promise.all(regs.map(r => r.unregister()));
+        }
+        if ("caches" in window) {
+          const keys = await caches.keys();
+          await Promise.all(keys.map(k => caches.delete(k)));
+        }
+      } catch (e) {}
+      location.reload();
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#111827">
+  <title>Статья — PyReference</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icons/icon-192.png">
+  <link rel="apple-touch-icon" href="assets/icons/icon-180.png">
+  <link rel="stylesheet" href="assets/css/style.css?v=11">
+</head>
+<body>
+  <header>
+    <div class="top">
+      <a class="iconBtn" href="articles.html" aria-label="Назад к статьям">←</a>
+      <h1 id="articleTitle">Статья</h1>
+    </div>
+    <div class="filters">
+      <select id="langSelect" class="langSelectSmall">
+        <option value="ru">Русский</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+  </header>
+
+  <main id="articleRoot" aria-live="polite"></main>
+
+  <script src="assets/js/core.js?v=11"></script>
+  <script src="assets/js/article.js?v=11"></script>
+</body>
+</html>
