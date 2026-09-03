@@ -6,3 +6,12 @@ data/app.db
 __pycache__/
 *.log
 .venv/
+# Локальные файлы — не публиковать в репозиторий
+PyReference/
+PyReference source code/
+pyreference source-code/
+screens/
+screens_src/
+icon_source.jpg
+icon_source2.png
+pyreference.txt
